@@ -1,3 +1,5 @@
+var DashboardPlugin = require('webpack-dashboard/plugin');
+
 module.exports = {
   entry: [
     './src/index.js'
@@ -14,7 +16,10 @@ module.exports = {
       query: {
         presets: ['react', 'es2015', 'stage-1']
       }
-    }]
+    }],
+    plugins: [
+        new DashboardPlugin()
+    ]
   },
   resolve: {
     extensions: ['', '.js', '.jsx']
